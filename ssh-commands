@@ -1,0 +1,13 @@
+How to ssh into remote machine ?
+ssh -i pem-file username@remote-server
+
+for ex: ssh -i azure-ssh-connect.pem azureuser@10.0.0.5
+
+To copy file from one machine to another
+scp -i pem-file suorce username@remote_server:destination
+
+for ex:
+scp -i azure-ssh-connect.pem azure-ssh-connect.pem azureuser@20.53.255.20:/home/azureuser/
+
+Note: To allow access to use pem file, use the below command
+chmod 400 pem-file
